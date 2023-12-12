@@ -9,19 +9,20 @@ class DeltaXplainer(BaseEstimator, RegressorMixin):
         self.y_delta: Optional[pd.Series] = None
         self.segments: List[str] = []
         self.model = None
+        self.f = None
+        self.g = None
 
     def fit(
         self,
         Xf: pd.DataFrame,
-        yf: pd.Series,
         f: ClassifierMixin,
         g: ClassifierMixin,
         Xg: Optional[pd.DataFrame] = None,
         yg: Optional[pd.Series] = None,
         params: Dict[str, Union[int, float, str]] = {
-            "max_depth": 4,
+            "max_depth": 8,
             "criterion": "gini",
-            "min_samples_leaf": 10,
+            "min_samples_leaf": 1,
             "min_impurity_decrease": 0,
         },
         class_diff: int = 1,
@@ -32,7 +33,6 @@ class DeltaXplainer(BaseEstimator, RegressorMixin):
 
         Args:
             Xf (pd.DataFrame): Feature set of the first group
-            yf (pd.Series): Target variable of the first group
             f (ClassifierMixin) : Model f - First model to compare
             g (ClassifierMixin) : Model g - Second model to compare
             Xg (pd.DataFrame, optional): Feature set of the second group. Defaults to None.
@@ -43,12 +43,15 @@ class DeltaXplainer(BaseEstimator, RegressorMixin):
         Returns:
             DeltaXplainer: Fitted DeltaXplainer instance
         """
+        
+        self.f = f
+        self.g = g
         if Xg is not None and yg is not None:
             self.X_delta = pd.concat([Xf, Xg])
         else:
             self.X_delta = Xf
             
-        self.y_delta=(f.predict(self.X_delta) != g.predict(self.X_delta)).astype(int)
+        self.y_delta=(self.f.predict(self.X_delta) != self.g.predict(self.X_delta)).astype(int)
         
         self.model,self.segments = get_rules_decision_tree(self.X_delta, self.y_delta, params=params, class_diff=class_diff)
         return self
