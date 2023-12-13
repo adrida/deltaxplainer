@@ -64,7 +64,7 @@ def extract_rules(
         else:
             classes = path[-1][0][0]
             l = np.argmax(classes)
-            rule += f"class: {class_names[l]} (Coverage: {np.round(100.0*classes[l]/np.sum(classes),2)}%)"
+            rule += f"class: {class_names[l]} (Probability: {np.round(100.0*classes[l]/np.sum(classes),2)}%)"
         rule += f" | based on {path[-1][1]:,} samples"
         rules += [rule]
     
