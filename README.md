@@ -1,4 +1,4 @@
-# DeltaXplainer, XAI model comparison and explanations
+# DeltaXplainer, XAI for model comparison and explanations
 
 [![Open In Jupyter Notebook](https://img.shields.io/badge/Open%20in-Jupyter%20Notebook-orange.svg)](https://github.com/adrida/deltaxplainer/blob/master/notebooks/get_started.ipynb) [![Documentation Status](https://readthedocs.org/projects/deltaxplainer/badge/?version=latest)](https://deltaxplainer.readthedocs.io/en/latest/?badge=latest) (documentation not up to date)
 
