@@ -9,7 +9,7 @@ This documentation provides a guide on how to use the deltaxplainer package for 
 Getting Started
 ----------------
 
-To get started, refer to the [Getting Started Guide](getting_started.rst) for installation instructions and basic usage examples.
+In order to have a hands on example please refer to this notebook https://github.com/adrida/deltaxplainer/blob/master/notebooks/get_started.ipynb
 
 Contents
 --------
