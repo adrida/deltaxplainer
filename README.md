@@ -32,7 +32,9 @@ Assuming you want to explain differences between `classifer_a` and `classifer_b`
 For more details on how the method works please refer to the original paper.
 
 `from deltaxplainer import DeltaXplainer`
+
 `delta_model = DeltaXplainer(X_a, X_b, model_a, model_b).fit()`
+
 `print(delta_model.segments)`
 
 This last line gives you a list of segments where the two models differ.
