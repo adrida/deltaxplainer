@@ -33,7 +33,9 @@ For more details on how the method works please refer to the original paper.
 
 `from deltaxplainer import DeltaXplainer`
 
-`delta_model = DeltaXplainer(X_a, X_b, model_a, model_b).fit()`
+`X_delta_train = pd.concat([X_a, X_b])`
+
+`delta_model = DeltaXplainer(X_delta_train, model_a, model_b).fit()`
 
 `print(delta_model.segments)`
 
