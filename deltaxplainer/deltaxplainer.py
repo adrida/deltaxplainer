@@ -6,7 +6,6 @@ from .decision_tree import get_rules_decision_tree
 class DeltaXplainer(BaseEstimator, RegressorMixin):
     def __init__(self) -> None:
         self.X_delta: Optional[pd.DataFrame] = None
-        self.y_delta: Optional[pd.Series] = None
         self.segments: List[str] = []
         self.model = None
         self.f = None
