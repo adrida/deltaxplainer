@@ -1,20 +1,26 @@
-.. deltaxplainer documentation master file, created by
-   sphinx-quickstart on Wed Dec 13 21:23:06 2023.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Welcome to deltaxplainer's Documentation
+========================================
 
-Welcome to deltaxplainer's documentation!
-=========================================
+Introduction
+------------
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+This documentation provides a guide on how to use the deltaxplainer package for explaining differences between two binary classifiers.
 
+Getting Started
+----------------
 
+To get started, refer to the [Getting Started Guide](getting_started.rst) for installation instructions and basic usage examples.
 
-Indices and tables
-==================
+Contents
+--------
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+- Installation
+- Usage Guide
+- API Reference
+
+Indices and Tables
+-------------------
+
+- :ref:`genindex`
+- :ref:`modindex`
+- :ref:`search`
