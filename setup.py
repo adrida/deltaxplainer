@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='deltaxplainer',
-    version='1.1',
+    version='1.1.1',
     packages=['deltaxplainer'],
     install_requires=[
     'numpy>=1.20',
