@@ -1,6 +1,6 @@
 # DeltaXplainer, XAI model comparison and explanations
 
-[![Documentation Status](https://readthedocs.org/projects/deltaxplainer/badge/?version=latest)](https://deltaxplainer.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/deltaxplainer/badge/?version=latest)](https://deltaxplainer.readthedocs.io/en/latest/?badge=latest) (documentation not up to date)
 
 
 Package for DeltaXplainer model implemented from the paper Dynamic Interpretability for Model Comparison via Decision Rules, A Rida, MJ Lesot, X Renard, C Marsala, DynXAI workshop at ECML PKDD 2023, https://arxiv.org/pdf/2309.17095.pdf
