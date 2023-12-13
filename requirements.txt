@@ -1,0 +1,4 @@
+# requirements.txt
+sphinx==4.3.0
+sphinx-rtd-theme==1.0.0
+# Add any other dependencies specific to your project or documentation needs
