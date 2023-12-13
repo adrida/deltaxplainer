@@ -1,8 +1,10 @@
 # deltaxplainer
 
-Package for DeltaXplainer model implemented from the paper https://arxiv.org/pdf/2309.17095.pdf
+Package for DeltaXplainer model implemented from the paper Dynamic Interpretability for Model Comparison via Decision Rules, A Rida, MJ Lesot, X Renard, C Marsala, DynXAI workshop at ECML PKDD 2023, https://arxiv.org/pdf/2309.17095.pdf
 
-DeltaXplainer is an algortihm aiming at explaining differences between two black box binary classifiers. 
+DeltaXplainer is an algortihm aiming at explaining differences between two black box binary classifiers.
+
+![DeltaXplainer Schema](https://github.com/adrida/deltaxplainer/blob/master/assets/delta.png?raw=true)
 
 The models takes as input the two models to compare and generate explanations. The package is originally built to support comparison of sklearn models but any object with a `predict` method doing binary classification should work.
 
@@ -10,16 +12,28 @@ The explanations are provided using decision rules. We propose to answer to the 
 
 The explanations are a list of segments where the two black box models make different predictions.
 
+Ideas for future improvements include considering other explanations format and ways to extract knowledge from the delta model.
 
 ### Installation
 
-
 `pip install deltaxplainer`
-
 
 ### Getting Started
 
-In order to have a hands on example
+In order to have a hands on example please refer to this [notebook](https://github.com/adrida/deltaxplainer/blob/master/notebooks/get_started.ipynb)
+
+#### Generating Explanations
+
+Assuming you want to explain differences between `classifer_a` and `classifer_b` trained on `X_a, y_a` and `X_b, y_b`
+
+For more details on how the method works please refer to the original paper.
+
+`from deltaxplainer import DeltaXplainer`
+`delta_model = DeltaXplainer(X_a, X_b, model_a, model_b).fit()`
+`print(delta_model.segments)`
+
+This last line gives you a list of segments where the two models differ.
+
 
 
 [under construction]
