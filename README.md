@@ -1,4 +1,4 @@
-# deltaxplainer
+# DeltaXplainer, XAI model comparison and explanations
 
 [![Documentation Status](https://readthedocs.org/projects/deltaxplainer/badge/?version=latest)](https://deltaxplainer.readthedocs.io/en/latest/?badge=latest)
 
